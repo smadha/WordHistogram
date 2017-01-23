@@ -11,6 +11,8 @@ def get_best_histogram(pair_score):
 pair_score = pickle.load(open("./feature/pair.p", "r"))
 hist, bins = get_best_histogram(pair_score)
 
+def get_0_score_idx():
+    return np.digitize([0], bins)[0]
 
 def get_feature(pair_list):
     '''
